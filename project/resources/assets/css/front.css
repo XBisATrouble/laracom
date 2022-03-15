@@ -194,14 +194,14 @@ li.menubar-cart a {
         HERO AREA
 ************************** */
 .top-area {
-    background: #fff url('../images/banner.jpg') no-repeat;
+    background: #8e93e5;
     background-size: cover;
     background-position: center;
     height: 760px;
     position: relative;
 }
 .hero-title {
-    font-size: 80px;
+    font-size: 70px;
     line-height: 100px;
     font-weight: 400;
     padding-bottom: 0px;
@@ -554,11 +554,10 @@ textarea, select {
 .footer-social li {
     display: inline-block;
     list-style: outside none none;
-    margin: 0 12px;
+    margin: 12px 12px;
     font-size: 22px;
 }
 .footer-social li a{
-    color: #FFFFFF
 }
 .footer-section p{
     font-size: 12px;

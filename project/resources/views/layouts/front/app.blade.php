@@ -62,17 +62,20 @@
             <div class="clearfix"></div>
             <div class="pull-right">
                 <ul class="nav navbar-nav navbar-right">
+                    <li><a href="{{ route('home') }}"> <i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="http://xxc1315.uta.cloud/"> <i class="fa fa-sticky-note"></i> Blog</a></li>
                     @if(auth()->check())
-                        <li><a href="{{ route('accounts', ['tab' => 'profile']) }}"><i class="fa fa-home"></i> My Account</a></li>
+                        <li><a href="{{ route('accounts', ['tab' => 'profile']) }}"><i class="fa fa-user"></i> My Account</a></li>
                         <li><a href="{{ route('logout') }}"><i class="fa fa-sign-out"></i> Logout</a></li>
                     @else
-                        <li><a href="{{ route('login') }}"> <i class="fa fa-lock"></i> Login</a></li>
+                        <li><a href="{{ route('login') }}"> <i class="fa fa-user"></i> Login</a></li>
                         <li><a href="{{ route('register') }}"> <i class="fa fa-sign-in"></i> Register</a></li>
                     @endif
                     <li id="cart" class="menubar-cart">
                         <a href="{{ route('cart.index') }}" title="View Cart" class="awemenu-icon menu-shopping-cart">
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <span class="cart-number">{{ $cartCount }}</span>
+                            Cart
                         </a>
                     </li>
                 </ul>

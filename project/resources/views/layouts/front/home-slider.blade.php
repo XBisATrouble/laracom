@@ -3,11 +3,20 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="hero-content">
-                    <h1 class="hero-title">{{config('app.name')}} Holiday <br> Collection</h1>
-                    <p class="hero-text">Download this amazing e-commerce web app for <strong class="text-success">FREE!</strong></p>
-                    <a class="btn btn-success" href="https://github.com/jsdecena/laracom" target="_blank" role="button">DOWNLOAD <i class="fa fa-cloud-download"></i></a>
-                    <a class="btn btn-danger" href="https://m.do.co/c/bce94237de96" target="_blank" role="button">Build on DigitalOcean <i class="fa fa-paper-plane"></i></a>
-                </div>
+                    <p class="hero-text">This is {{config('app.name')}}</p>
+                    <h1 class="hero-title">Welcome to a new shopping experience</h1>
+                    <!-- search form -->
+                    <div>
+                        <!-- search form -->
+                        <form action="{{route('search.product')}}" method="GET" class="sidebar-form">
+                            <div class="input-group">
+                                <input type="text" name="q" class="form-control" placeholder="Search product" value="{{ request()->input('q') }}">
+                                <span class="input-group-btn">
+                        <button type="submit" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>Search</button>
+                    </span>
+                            </div>
+                        </form>
+                    </div>
             </div>
             <div class="col-md-4"></div>
         </div>
