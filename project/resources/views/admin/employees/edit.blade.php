@@ -17,12 +17,12 @@
                         <label for="email">Email <span class="text-danger">*</span></label>
                         <div class="input-group">
                             <span class="input-group-addon">@</span>
-                            <input type="text" name="email" id="email" placeholder="Email" class="form-control" value="{!! $employee->email ?: old('email')  !!}">
+                            <input type="text" name="email" id="email" class="form-control" value="{!! $employee->email ?: old('email')  !!}">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="password">Password <span class="text-danger">*</span></label>
-                        <input type="password" name="password" id="password" placeholder="xxxxx" class="form-control">
+                        <input type="password" name="password" id="password" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="roles">Role </label>
