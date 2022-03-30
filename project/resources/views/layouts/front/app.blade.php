@@ -71,7 +71,7 @@
                         <li><a href="{{ route('login') }}"> <i class="fa fa-user"></i> Login</a></li>
                         <li><a href="{{ route('register') }}"> <i class="fa fa-sign-in"></i> Register</a></li>
                     @endif
-                    <li><a href="{{ route('register') }}"> <i class="fa fa-envelope"></i> Contact Us</a></li>
+                    <li><a href="{{ route('contact') }}"> <i class="fa fa-envelope"></i> Contact Us</a></li>
                     <li id="cart" class="menubar-cart">
                         <a href="{{ route('cart.index') }}" title="View Cart" class="awemenu-icon menu-shopping-cart">
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
