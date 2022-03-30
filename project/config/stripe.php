@@ -1,7 +1,7 @@
 <?php
     return [
-        'name' => 'stripe',
-        'description' => 'The new standard in online payments',
+        'name' => 'alipay',
+        'description' => 'Alipay - Bringing convenience into your life.',
         'key' => env('STRIPE_KEY', 'xxx'),
         'secret' => env('STRIPE_SECRET', 'xxx'),
         'redirect_url' => env('STRIPE_REDIRECT_URL', 'xxxx'),
