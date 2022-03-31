@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Front;
 
 use App\Shop\Categories\Repositories\Interfaces\CategoryRepositoryInterface;
+use Illuminate\Support\Facades\Mail;
 
 class ContactController
 {
@@ -25,6 +26,7 @@ class ContactController
 
     public function store()
     {
+        Mail::to("xbisatrouble@gmail.com")->send("test");
         return view('front.contact',["data"=>"Success"]);
     }
 }
