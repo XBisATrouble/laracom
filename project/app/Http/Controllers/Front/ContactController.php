@@ -6,6 +6,7 @@ use App\Shop\Categories\Repositories\Interfaces\CategoryRepositoryInterface;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 use App\Mail\Contact;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class ContactController
 {
@@ -32,10 +33,7 @@ class ContactController
         $email = $request->input('email');
         $userMessage = $request->input('message');
         Mail::to('xbisatrouble@gmail.com')->send(new Contact($name, $email, $userMessage));
-        // Mail::send('emails.contact.email',['name'=>$name, 'email'=>$email, 'userMessage'=>$userMessage],function($message){
-        //     $to = 'xbisatrouble@gmail.com';
-        //     $message ->to($to)->subject('Contact Us');
-        // });
+        Alert::success('We have reviced your message');
         return view('front.contacts.contact',["data"=>"Success"]);
     }
 }
