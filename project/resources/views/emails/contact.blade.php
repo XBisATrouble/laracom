@@ -1,6 +1,6 @@
 @component('mail::message')
 
-# We have recived one message
+# We have recived one message from customer
 
 ## Name : {{ $name }}
 
