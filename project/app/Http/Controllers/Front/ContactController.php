@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers\Front;
 
+use App\Http\Controllers\Controller;
 use App\Shop\Categories\Repositories\Interfaces\CategoryRepositoryInterface;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 use App\Mail\Contact;
 use RealRashid\SweetAlert\Facades\Alert;
 
-class ContactController
+class ContactController extends Controller
 {
     /**
      * HomeController constructor.
