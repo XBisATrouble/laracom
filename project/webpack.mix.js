@@ -59,6 +59,7 @@ mix
     .copyDirectory('resources/assets/admin-lte/img', 'public/img')
     .copyDirectory('resources/assets/images', 'public/images')
     .copy('resources/assets/js/scripts.js', 'public/js/scripts.js')
+    .copy('node_modules/@fortawesome/fontawesome-free/webfonts', 'public/webfonts')
     .copy('resources/assets/js/custom.js', 'public/js/custom.js');
 
 /*
