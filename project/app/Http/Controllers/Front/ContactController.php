@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Front;
 
 use App\Shop\Categories\Repositories\Interfaces\CategoryRepositoryInterface;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Http\Request;
 
 class ContactController
 {
@@ -21,19 +22,18 @@ class ContactController
      */
     public function index()
     {
-        return view('front.contact', ["data"=>""]);
+        return view('front.contacts.contact', ["data"=>""]);
     }
 
-    public function store()
+    public function store(Request $request)
     {
-        $name = '王宝花';
-        // Mail::send()的返回值为空，所以可以其他方法进行判断
-        Mail::send('emails.test',['name'=>$name],function($message){
+        $name = $request->input('name');
+        $email = $request->input('email');
+        $userMessage = $request->input('message');
+        Mail::send('emails.contact.email',['name'=>$name, 'email'=>$email, 'userMessage'=>$userMessage],function($message){
             $to = 'xbisatrouble@gmail.com';
-            $message ->to($to)->subject('邮件测试');
+            $message ->to($to)->subject('Contact Us');
         });
-        // 返回的一个错误数组，利用此可以判断是否发送成功
-        dd(Mail::failures());
-        return view('front.contact',["data"=>"Success"]);
+        return view('front.contacts.contact',["data"=>"Success"]);
     }
 }

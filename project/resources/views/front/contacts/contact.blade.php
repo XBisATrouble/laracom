@@ -22,11 +22,9 @@
                     <input type="email" id="email" name="email" value="{{ old('email') }}" class="form-control">
                 </div>
                 <div class="form-group">
-                    <label for="email">Message</label>
-                    <textarea id="story" class="form-control"></textarea>
-
+                    <label for="message">Message</label>
+                    <textarea type="text" name="message" id="message" value="" class="form-control"></textarea>
                 </div>
-
                 <div class="row">
                     <button class="btn btn-default btn-block" type="submit">Submit</button>
                 </div>
