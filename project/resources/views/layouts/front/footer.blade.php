@@ -4,7 +4,7 @@
             <div class="col-md-12 text-center">
                 <ul class="footer-menu">
                     <li> <a href="{{ route('accounts', ['tab' => 'profile']) }}">Your account</a>  </li>
-                    <li> <a href="">Contact us</a>  </li>
+                    <li> <a href="{{ route('contact') }}">Contact us</a>  </li>
                 </ul>
                 <ul class="footer-social">
                     <li> <a href=""> <i class="fa fa-facebook" aria-hidden="true"></i>  </a> </li>
