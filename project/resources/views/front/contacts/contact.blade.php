@@ -7,7 +7,6 @@
 
 @section('content')
     <section class="container content">
-        <div class="col-md-12" style="align-content: center">{{$data}}</div>
         <div class="col-md-4 col-md-offset-4">
             <h2>Contact Us</h2>
             <form action="{{ route('contact.store') }}" method="post" class="form-horizontal">
