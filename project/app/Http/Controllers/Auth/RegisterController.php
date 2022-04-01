@@ -11,6 +11,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\Register;
 
 class RegisterController extends Controller
 {
@@ -64,6 +66,7 @@ class RegisterController extends Controller
     public function register(RegisterCustomerRequest $request)
     {
         $customer = $this->create($request->except('_method', '_token'));
+        Mail::to($customer->email)->send(new Register($customer->name));
         Auth::login($customer);
 
         return redirect()->route('accounts');
